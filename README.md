@@ -7,7 +7,7 @@
 ## Command Install :
 
 ```bash
-(https://raw.githubusercontent.com/arg-afk/Pterodactyl-Theme-Autoinstaller/refs/heads/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/arg-afk/Pterodactyl-Theme-Autoinstaller/main/install.sh))
 ```
 
 ## Fitur Tools :
@@ -17,7 +17,7 @@
 - Install Tema Enigma
 - Uninstall Tema
 
- (Kode Token : ganzymods)
+ (Kode Token : ganzy)
 
 ## System Support :
 
