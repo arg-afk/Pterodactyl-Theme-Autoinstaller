@@ -15,7 +15,8 @@ bash <(curl -s https://raw.githubusercontent.com/arg-afk/Pterodactyl-Theme-Autoi
 - Install Tema Stellar
 - Install Tema Billing
 - Install Tema Enigma
-- Uninstall Tema
+- Install Tema Unix
+- Uninstall tema
 
  (Kode Token : ganzy)
 
