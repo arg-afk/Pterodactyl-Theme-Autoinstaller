@@ -216,18 +216,22 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
-  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-  sudo apt install -y nodejs
-  npm i -g yarn
-  cd /var/www/pterodactyl
-  yarn add react-feather
-  php artisan billing:install stable
-  php artisan migrate
-  yarn build:production
-  php artisan view:clear
-  sudo rm /root/unix.zip
-  sudo rm -rf /root/pterodactyl
+    cd /var/www/pterodactyl
+    apt install unzip -y
+    apt autoremove -y
+    apt autoclean -y
+    clear
+    php artisan down
+    wget https://filebin.net/rfn3f9tx3ai5e87d/unix.zip
+    unzip unix.zip
+    composer install --no-dev --optimize-autoloader
+    php artisan migrate --force
+    php artisan view:clear
+    php artisan config:clear
+    chown -R www-data:www-data /var/www/pterodactyl/*
+    php artisan queue:restart
+    php artisan up
+    
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
